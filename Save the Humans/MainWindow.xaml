@@ -53,7 +53,7 @@
                     <GradientStop Color="#FFECC3A1" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <StackPanel x:Name="human" Orientation="Vertical">
+            <StackPanel x:Name="human" Orientation="Vertical" MouseDown="human_MouseDown">
                 <Ellipse Fill="White" Height="15" Width="15"/>
                 <Rectangle Fill="White" Height="30" Width="15"/>
             </StackPanel>
@@ -73,7 +73,7 @@
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
             </TextBlock>
-            <Rectangle x:Name="target" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" Canvas.Left="580" Canvas.Top="55">
+            <Rectangle x:Name="target" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" Canvas.Left="580" Canvas.Top="55" MouseEnter="target_MouseEnter">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

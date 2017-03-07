@@ -108,5 +108,28 @@ namespace Save_the_Humans
             storyboard.Children.Add(animation);
             storyboard.Begin();
         }
+
+        private void human_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (enemyTimer.IsEnabled)
+            {
+                humanCaptured = true;
+                human.IsHitTestVisible = false;
+            }
+        }
+
+        private void target_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (targetTimer.IsEnabled && humanCaptured)
+            {
+                progressBar.Value = 0;
+                Canvas.SetLeft(target, random.Next(100, (int)playArea.ActualWidth - 100));
+                Canvas.SetTop(target, random.Next(100, (int)playArea.ActualWidth - 100));
+                Canvas.SetLeft(human, random.Next(100, (int)playArea.ActualWidth - 100));
+                Canvas.SetTop(human, random.Next(100, (int)playArea.ActualWidth - 100));
+                humanCaptured = false;
+                human.IsHitTestVisible = true;
+            }
+        }
     }
 }
