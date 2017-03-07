@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Save_the_Humans
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainPage : Window
+    public partial class Window1 : Window
     {
-        public MainPage()
+        public Window1()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
