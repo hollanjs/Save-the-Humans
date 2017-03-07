@@ -53,6 +53,42 @@
                     <GradientStop Color="#FFECC3A1" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
+            <StackPanel x:Name="human" Orientation="Vertical">
+                <Ellipse Fill="White" Height="15" Width="15"/>
+                <Rectangle Fill="White" Height="30" Width="15"/>
+            </StackPanel>
+            <TextBlock x:Name="gameOverText" TextWrapping="Wrap" Text="GAME OVER" FontSize="125" FontWeight="Bold" FontStyle="Italic" FontFamily="Serpentine" Canvas.Left="78" Canvas.Top="170" RenderTransformOrigin="0.5,0.5" TextAlignment="Center">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FF3D36D4" Offset="0"/>
+                        <GradientStop Color="#FF0A065F" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle x:Name="target" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" Canvas.Left="580" Canvas.Top="55">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="45"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFEFFF89" Offset="0.3"/>
+                        <GradientStop Color="#FFDCFF00" Offset="1"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
         </Canvas>
         <Label x:Name="label" Content="SAVE THE HUMANS" Foreground="#FFC7FFBE" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" FontWeight="Bold" FontFamily="Serpentine"/>
 
