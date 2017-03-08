@@ -13,7 +13,7 @@
             </Grid>
         </ControlTemplate>
     </Window.Resources>
-    <Grid Background="Black">
+    <Grid x:Name="grid" Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="160"/>
             <ColumnDefinition/>
@@ -46,7 +46,7 @@
         <ProgressBar x:Name="progressBar" Grid.Column="1" 
                      Grid.Row="2" Height="20"/>
         <Canvas x:Name="playArea" 
-                Grid.Row="1" Grid.ColumnSpan="10">
+                Grid.Row="1" Grid.ColumnSpan="10" MouseMove="playArea_MouseMove" MouseLeave="playArea_MouseLeave">
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFE49452" Offset="0"/>
